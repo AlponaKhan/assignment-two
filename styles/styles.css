@@ -159,6 +159,7 @@
 .curriculam{
     text-align: center;
     background-image: url("../assets/bg.png");
+    
 }
 .curr-title{
     font-weight: bold;
@@ -191,6 +192,23 @@
 }
 .curric-img{
     margin-top: 52px;
+}
+/* Responsive Curriculam Section */
+@media screen and (max-width: 576px){
+    .curriculam{
+        margin-top: 40px;
+        
+    }
+    .curric-container{
+        grid-template-columns: 1fr;
+
+    } 
+    .curric-title{
+        font-size: 1.62rem;
+    }
+    .arrow{
+        display: none;
+    }
 }
 
 /* Curriculam Section End */
