@@ -46,7 +46,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1440px;
 }
 .nav-item{
     list-style: none;
@@ -89,6 +88,7 @@
 .banner{
     display: flex;
     justify-content: space-between;
+    
 }
 .banner-title{
     font-weight: bold;
@@ -96,6 +96,9 @@
 }
 .banner-description{
     font-size: 1.25rem;
+}
+.banner-img{
+    width: 100%;
 }
 .banner-btn{
     background-color: black;
@@ -111,12 +114,20 @@
 /* Responsive Header */
 @media screen and (max-width: 576px) {
     .nav-title,
-    .nav{
+    .nav-links,
+    .nav-btn{
         display: none;
+    }
+    .head,
+    .curriculam,
+    .our-story,
+    .stories,
+    .foot{
+        width: 100%;
+        margin: 0%;
     }
     .favicon{
         display: flex;
-        
     }
     .navbar{
         display: flex;
@@ -126,11 +137,15 @@
     }
     .banner{
         flex-direction: column-reverse;
-        margin:0;
     }
-    .navbar{
-        margin: 0;
+    .banner-img{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 90%;
+        
     }
+    .banner-title,
     .banner-des{
         text-align: center;
     }
@@ -147,6 +162,8 @@
 .curric-container{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    align-self: center;
+    justify-self: center;
     gap: 29px;
     margin-bottom: 80px;
 }
@@ -202,11 +219,11 @@
 @media screen and (max-width: 576px){
     .curriculam{
         margin-top: 40px;
-        
+        padding-top: 20px; 
     }
     .curric-container{
         grid-template-columns: 1fr;
-
+        width: 90%;
     } 
     .curric-title{
         font-size: 1.62rem;
@@ -322,19 +339,26 @@
 }
 /* Responsive Story Section */
 @media screen and (max-width: 576px){
+
     .stories-title{
         font-size: 1.6rem;
 
+    }
+    .story{
+        align-self: center;
+        justify-self: center;
     }
     .card-one{
         display: none;
     }
     .stories-cards{
         grid-template-columns: repeat(2, 1fr);
+        height: 100%;
+        width: 100%;
     }
     .story-card{
-        height: 180px;
-        width: 170px;
+        height: 75%;
+        width: 100%;
     }
     .story-title{
         font-size: .5rem;
@@ -357,6 +381,7 @@
         height: 30px;
         width: 134px;
         font-size: 1rem;
+        text-align: center;
     }
 }
 /* Stories Section End */
@@ -426,4 +451,34 @@ footer{
     width: 194px;
     padding-bottom: 160px;
 }
+/* Responsive Footer Section */
+@media screen and (max-width: 576px){
+    .foot{
+        grid-template-columns: 1fr;
+        padding-bottom: 0px;
+        margin-bottom: 0px;
+    }
+    .footer-head,
+    .footer-title,
+    .about-head,
+    .foot-nav{
+        width: 100%;
+        margin: 0px;
+        padding-left: 5px;
+    }
+    .footer-description{
+        padding-left: 16px;
+        padding-bottom: 0px;  
+    }
+    .about,
+    .contact{
+        padding-left: 16px;
+    }
+    .about-head{
+        margin-top: 32px;
+        padding-bottom: 16px;
+        
+    }
+}
+
 /* Footer Section End */
